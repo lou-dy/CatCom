@@ -1,3 +1,41 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  font-family: 'Quicksand', 'Futura', 'Verdana', 'Arial', sans-serif;
+}
+
+nav {
+  padding-right: 3em;
+  background: #f6f8f9;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  // box-shadow: 0 0 50px #727171;
+}
+
+.navbar-inverse {
+  border: none;
+}
+
+.my-placeholder {
+  height: 500px;
+  margin: auto;
+}
+
+footer {
+  padding-right: 3em;
+  text-align: right;
+}
+
+h1 {
+  font-family: 'Julius Sans One', 'Futura', 'Verdana', 'Arial', sans-serif;
+  text-align: center;
+  color: #5f6268;
+  margin-top: 3em;
+}
