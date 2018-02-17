@@ -1,9 +1,12 @@
 <div class="container">
-  <h1>CatCom for Catlovers</h1>
-  <h2>Welcome!</h2>
-  <p> The date and time is <%= Time.now %></p>
-  <% test_variable = 42 %>
-  <%= test_variable %>
-  <%= test_variable - 2 %>
+  <div class="col-md-4 big-logo">
+    <%= image_tag("hedgehog.png", class: "img-responsive my-placeholder") %>
+  </div>
+  <div class="col-md-8">
+    <h1 class="welcome">Welcome to my shop!</h1>
+    <h2></h2>
+    <p>Computer Graphics, Animations and other Digital Arts</p>
+    <p> The date and time is <%= Time.now %></p>
+  </div>
   <%= image_tag("hedgehog.png", class: "img-responsive my-placeholder") %>
 </div>

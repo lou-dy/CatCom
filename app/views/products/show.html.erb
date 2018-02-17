@@ -1,19 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<div class="container">
+  <h1><%= @product.name %></h1>
+  <div class="product-image col-md-6">
+    <img src="<%= @product.image_url %>">
+  </div>
+  <div class="product-description col-md-6">
+    <h3>Description</h3>
+    <p><%= @product.description %></p>
+  </div>
+  <div class="show-button">
+    <button type="button"><%= link_to 'Edit', edit_product_path(@product) %> </button>
+    <button type="button"><%= link_to 'Back', products_path %> </button>
+  </div>
+</div>

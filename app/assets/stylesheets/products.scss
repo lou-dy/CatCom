@@ -1,20 +1,64 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-table, th, td {
-  border: solid 1px black;
+
+.product {
+  background-color: #f4f4f4;
+  text-align: center;
+  border-spacing: 30px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-bottom: solid 5px #3d4c51;
+  height: 400px;
+  width: 30%;
+  margin: 20px;
+  padding: 20px;
 }
 
-th {
-  height: 50px;
+.product > img {
+  max-width: 300px;
+  height: 200px;
+}
+
+.add-button {
+  clear: both;
+  margin-left: 2em;
+}
+
+.show-button {
+  margin-top: 15em;
+}
+
+.add-button > button ,
+.show-button > button {
+  background: #f6f8f9;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  // box-shadow: 0 0 50px #727171;
+  padding: 1em;
   font-size: 1.5em;
-  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px;
 }
 
-td {
-  height: 30px;
+.product-image > img{
+  width: 100%;
 }
 
-th, td {
-  padding: 10px;
+.form {
+  margin: auto;
+}
+
+textarea, input {
+  width: 800px;
+}
+
+textarea {
+  height: 300px;
 }
