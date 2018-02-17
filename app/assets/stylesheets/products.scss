@@ -4,20 +4,31 @@
 
 .product {
   background-color: #f4f4f4;
+  align-items: center;
   text-align: center;
-  border-spacing: 30px;
+  border-spacing: 25px;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-bottom: solid 5px #3d4c51;
   height: 400px;
-  width: 30%;
+  width: 28.9%;
   margin: 20px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .product > img {
+  margin: auto;
   max-width: 300px;
   height: 200px;
+}
+
+.product > h3 {
+  margin: 10px 0 0 0;
+}
+
+.product > hr,
+.product > p {
+  margin: 0 0 10px 0;
 }
 
 .add-button {
@@ -47,12 +58,13 @@
   margin: 10px;
 }
 
-.product-image > img{
-  width: 100%;
+.price {
+  text-align: right;
+  font-size: 1.5em;
 }
 
-.form {
-  margin: auto;
+.product-image > img{
+  width: 100%;
 }
 
 textarea, input {
