@@ -16,7 +16,7 @@
   padding: 10px;
 }
 
-.product > img {
+.product > a > img {
   margin: auto;
   max-width: 300px;
   height: 200px;
@@ -31,16 +31,7 @@
   margin: 0 0 10px 0;
 }
 
-.add-button {
-  clear: both;
-  margin-left: 2em;
-}
-
-.show-button {
-  margin-top: 15em;
-}
-
-.add-button > button ,
+.add-button,
 .show-button > button {
   background: #f6f8f9;
   /* Old browsers */
@@ -56,6 +47,17 @@
   text-align: center;
   text-decoration: none;
   margin: 10px;
+  width: 300px;
+  // border: solid 2px black;
+}
+
+.add-button {
+  clear: both;
+  margin-left: 2em;
+}
+
+.show-button {
+  margin-top: 15em;
 }
 
 .price {

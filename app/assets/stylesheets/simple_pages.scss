@@ -5,6 +5,7 @@
 body {
   font-family: 'Quicksand', 'Futura', 'Verdana', 'Arial', sans-serif;
   background-color: #efefef;
+  margin:0;
 }
 
 nav {
@@ -64,4 +65,40 @@ h3 {
 .big-logo > img {
   margin-top: 6em;
   width: 200px;
+}
+
+#featured_h1 {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+#carousel {
+  margin:0;
+  padding: 100px 0 0 0;
+  width: 100vw;
+  min-height: 80vh;
+  max-height: 100vh;
+  left: -15px;
+}
+
+.item > img{
+  max-height: 70vh;
+  margin: auto;
+  padding-top: 80px;
+}
+
+.carousel-caption {
+  position: relative;
+  left:auto;
+  right: auto;
+}
+
+.carousel-caption > p {
+  font-family: 'Julius Sans One', 'Futura', 'Verdana', 'Arial', sans-serif;
+  font-size: 2em;
+  margin: 0 0 25px 0;
 }

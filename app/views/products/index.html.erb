@@ -7,16 +7,8 @@
   <h2 class="section-title"> 3D Models </h2>
 
   <% @products.each do |product| %>
-    <div class="col-md-4 product">
-      <%= image_tag(product.image_url, class: "img-responsive") %>
-      <h3 class="pName"><%= product.name %></h3>
-      <p><%= product.copy %> </p> <br>
-      <hr>
-      <p class="price">
-        <strong> $<%= product.price %> </strong>
-      </p>
-      <%= link_to 'Show', product %> | <%= link_to 'Edit', edit_product_path(product) %> | <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
+
+    <%= render product %>
 
   <% end %>
 
@@ -24,7 +16,7 @@
   <br>
 
   <div class="add-button">
-    <button type="button"> <%= link_to 'Add New Product', new_product_path %> </button>
+    <%= link_to 'Add New Product', new_product_path %>
   </div>
 
 </div>
