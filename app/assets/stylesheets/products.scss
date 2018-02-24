@@ -2,18 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.product {
+.product,
+.order {
   background-color: #f4f4f4;
-  align-items: center;
-  text-align: center;
   border-spacing: 25px;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-bottom: solid 5px #3d4c51;
-  height: 400px;
-  width: 28.9%;
   margin: 20px;
   padding: 10px;
+}
+
+.product {
+  height: 400px;
+  width: 28.9%;
+  align-items: center;
+  text-align: center;
 }
 
 .product > a > img {
@@ -29,6 +33,10 @@
 .product > hr,
 .product > p {
   margin: 0 0 10px 0;
+}
+
+.order {
+  text-align: left;
 }
 
 .add-button,
