@@ -1,0 +1,15 @@
+<div class="container">
+  <h1> Orders </h1>
+  <div class="row">
+    <% @orders.each do |order| %>
+      <div class="col-sm-2 col-md-4 order_box">
+        <h3>
+          Order # <%= link_to order.id, order %>: <br>
+          <%= link_to order.product.name, order.product %>
+        </h3>
+        <p><%= order.product.description %></p>
+        <strong>$ <%= order.product.price %></strong>
+      </div><!-- /col -->
+    <% end %>
+  </div>
+</div>
