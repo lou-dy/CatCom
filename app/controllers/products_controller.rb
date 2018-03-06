@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to "simple_pages/landing_page" }
+        format.html { redirect_back fallback_location: @product, notice: 'Product was successfully updated.' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
