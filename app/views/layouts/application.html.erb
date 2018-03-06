@@ -32,10 +32,10 @@
         </div> <!--end navbar-header-->
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="../simple_pages/index.html">Home</a></li>
-            <li><a href="../products">Products</a></li>
-            <li><a href="../simple_pages/about.html">About</a></li>
-            <li><a href="../simple_pages/contact.html">Contact</a></li>
+            <li><%= link_to "Home", simple_pages_index_path %></li>
+            <li><%= link_to "Products", products_path %></li>
+            <li><%= link_to "About", simple_pages_about_path %></li>
+            <li><%= link_to "Contact", simple_pages_contact_path %></li>
           </ul>
         </div> <!--end navbar-collapse-->
       </div> <!--end container-fluid-->
