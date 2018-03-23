@@ -1,7 +1,7 @@
 <div class="col-sm-2 col-md-4 product">
   <%= link_to image_tag(product.image_url, class: "img-responsive"), product %>
   <h3 class="pName"><%= link_to product.name, product %></h3>
-  <p><%= product.copy %> </p> <br>
+  <p><%= product.copy %> </p>
   <hr>
   <p class="price">
     <strong> <%= number_to_currency(product.price) %> </strong>

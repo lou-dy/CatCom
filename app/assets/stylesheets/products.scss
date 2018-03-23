@@ -35,10 +35,20 @@
   margin: 0 0 10px 0;
 }
 
+.product > p {
+  display: -webkit-box;
+  height: 36px;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
 .order {
   text-align: left;
 }
 
+.send_button,
 .add-button,
 .show-button > button {
   background: #f6f8f9;
@@ -83,4 +93,9 @@ textarea, input {
 
 textarea {
   height: 300px;
+}
+
+.sidebar-filter {
+  text-align: left;
+  align-items: left;
 }
