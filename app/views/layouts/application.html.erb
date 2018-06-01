@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CatCom</title>
+    <title>FancyFins</title>
 
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Quicksand" rel="stylesheet">
 
@@ -11,12 +11,15 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+    <!-- Bootstrap core JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
+  <body data-spy="scroll">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -27,30 +30,43 @@
             <span class="icon-bar"></span>
           </button>
           <div class="projectName navbar-brand">
-            <a href="#">CatCom</a>
+            <%= link_to "FancyFins", simple_pages_index_path %>
           </div> <!--end projectName-->
+
         </div> <!--end navbar-header-->
         <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav pull-right">
             <li><%= link_to "Home", simple_pages_index_path %></li>
-            <li><%= link_to "Products", products_path %></li>
-            <li><%= link_to "About", simple_pages_about_path %></li>
-            <li><%= link_to "Contact", simple_pages_contact_path %></li>
+            <li><%= link_to "Male Bettas", male_betta_path %></li>
+            <li><%= link_to "Orders", orders_path %></li>
             <li>
-              <%= form_with(url: products_path, method: 'get', local: true, class: 'nav_search') do |form| %>
-                <%= form.text_field :q, id: 'q', value: params[:q], class: 'nav_searchbar', placeholder: 'Search for...' %>
-                <%= button_tag(type: 'submit', class: "btn btn-primary, nav_search_submit") do %>
-                  <span class="glyphicon glyphicon-search"></span>
-                <% end %>
+              <% if user_signed_in? %>
+                <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+              <% else %>
+                <%= link_to('Login', new_user_session_path) %>
               <% end %>
+            </li>
           </ul>
         </div> <!--end navbar-collapse-->
       </div> <!--end container-fluid-->
     </nav>
     <div class="navbar-spacer"></div>
+
+    <div class="container notice">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+
     <%= yield %>
+    <div class="navbar-spacer"></div>
     <footer>
-      &copy; 2018 Louise Dy Quiangco
+      <%= form_with(url: male_betta_path, method: 'get', local: true, class: 'nav_search') do |form| %>
+        <%= form.text_field :q, id: 'q', value: params[:q], class: 'nav_searchbar', placeholder: 'Search for...' %>
+        <%= button_tag(type: 'submit', class: "btn btn-primary, nav_search_submit") do %>
+          <span class="glyphicon glyphicon-search"></span>
+        <% end %>
+      <% end %>
+      <div id="copy"> &copy; 2018 Louise Dy Quiangco </div>
     </footer>
   </body>
 </html>

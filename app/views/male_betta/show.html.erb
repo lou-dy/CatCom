@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <div class="col-md-12">
+    <h1><%= @male_bettum.name %></h1>
+    <div class="product-image col-md-6">
+      <%= image_tag(@male_bettum.image_url, class: "img-responsive") %>
+    </div>
+    <div class="product-description col-md-6">
+      <h3>Description</h3>
+      <p><%= @male_bettum.description %></p>
+      <h4>Color</h4>
+      <p><%= @male_bettum.color %></p>
+      <h4>Tail Type</h4>
+      <p><%= @male_bettum.tail %></p>
+      <h4>Pattern</h4>
+      <p><%= @male_bettum.pattern %></p>
+    </div>
+    <div class="show-button">
+      <button type="button"><%= link_to 'Edit', edit_male_bettum_path(@male_bettum) %> </button>
+      <button type="button"><%= link_to 'Back', male_betta_path %> </button>
+    </div>
+  </div>
+</div>

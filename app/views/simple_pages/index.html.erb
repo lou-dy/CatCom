@@ -1,12 +1,174 @@
+<div class="container-fluid">
+  <div id="carousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel" data-slide-to="1"></li>
+      <li data-target="#carousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active carousel-img">
+        <%= image_tag '1080x400_FancyFins.png' %>
+      </div>
+      <div class="item carousel-img">
+        <%= image_tag '1080x400_Sale.png' %>
+      </div>
+      <div class="item carousel-img">
+        <%= image_tag '1080x400_marimo-01.png' %>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <div>
+  </div>
+
+</div> <!-- end container -->
+
 <div class="container">
-  <div class="col-md-4 big-logo">
-    <%= image_tag("hedgehog.png", class: "img-responsive my-placeholder") %>
-  </div>
-  <div class="col-md-8">
-    <h1 class="welcome">Welcome to my shop!</h1>
-    <h2></h2>
-    <p>Computer Graphics, Animations and other Digital Arts</p>
-    <p> The date and time is <%= Time.now %></p>
-  </div>
-  <%= image_tag("hedgehog.png", class: "img-responsive my-placeholder") %>
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-md-3">
+      <div class="sidebar" id="sidebar">
+        <img id="basicsImg" src="https://gobetta.com/wp-content/uploads/2017/02/DoubleTailWhite.png">
+        <ul class="nav nav-pills nav-stacked">
+          <li class="nav-link" id="featurelink"> <a href="#feature"> Featured Products </a> </li>
+          <li class="nav-link" id="basicslink"> <a href="#basics"> Betta Care Sheet </a> </li>
+          <li class="nav-link" id="aboutlink"> <a href="#about"> About Us </a> </li>
+          <li class="nav-link" id="contactlink">  <a href="#contact"> Contact Us </a> </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-9">
+
+      <div class="navbar-spacer" id="feature"></div>
+
+      <div class="row feature">
+        <h1>Featured Products</h1>
+        <% @male_betta.each do |male_bettum| %>
+          <div class="col-xs-12 col-sm-6 col-md-4 product">
+            <%= link_to image_tag(male_bettum.image_url, class: "img-responsive"), male_bettum %>
+            <h3 class="pName"><%= link_to male_bettum.name, male_bettum %></h3>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="navbar-spacer" id="basics"></div>
+
+      <div class="Basics">
+        <h1>Betta Care Sheet</h1>
+        <p><strong>Betta Splendens,</strong> also called Siamese fighting fish, are very colorful freshwater fish. They are popular and hardy pets and can be found in many petstores everywhere. Bettas have a life expectancy of 5-7 years, but with proper care can live even longer. Unlike many other fish, bettas have the unique ability to breathe oxygen directly from the air and also take in oxygen from its gills. This is how bettas can survive in cups in the petstores over periods of time. This is not optimal for their health though, so here are a few basics in betta fish care, as well as popular misconceptions about the species. </p>
+        <h3> Setting up your tank </h3>
+          <ul class="bettabasics">
+              <li><b>Tank Size:</b>
+                <p>2.5 gallon aquarium minimum with a lid. While bettas can survive in less than favorable conditions, do not keep your bettas in a small bowl. Wild bettas have wide territories of about 3 square feet, and need space to swim and exercise. Bettas are also very good jumpers, and in the wild would jump from puddle to puddle until they find a more suitable living space. A lid will prevent your betta from jumping to its death.
+                </p>
+              </li>
+              <li><b>Cycling:</b>
+                <p>Before you purchase your betta, make sure you have set up a cycled tank. Cycling a tank usually takes 4-6 weeks, and water test readings should read 0 ammonia, 0 nitrates, and <20 nitrates. Add some nitrifying bacteria to fast track the cycling process. A cycled tank has an established colony of bacteria that keep the nitrite and ammonia at safe levels. The bacteria live in the aquarium's filter. Without this, your aquarium will suffer from ammonia spikes that will burn your betta's fins and gills. Many first-time aquarium owners make this mistake and end up losing their betta within days or weeks of adopting it.
+                </p>
+              </li>
+              <li><b>Temperature:</b>
+                <p>Bettas are from tropical climates and water temperatures should never drop below 74°F (23.5°C) and ideally should remain between 78° and 80° F (25.5° and 26.5 C). Purchase a submersible heater and a thermometer for your betta. Preset heaters are good options. Be sure to check the wattage of the heater is compatible with your tank.
+                </p>
+              </li>
+              <li><b>Filter:</b>
+                <p>Bettas have large fins that make it difficult for them to swim in strong currents. Sponge filters are good options for betta setups, because it is gentle enough and helps keep your water in good condition for longer. Opting out of filters will mean you will need to do more water changes to keep the water clean.
+                </p>
+              </li>
+              <li><b>Maintenance:</b>
+                <p>The rule of thumb is a weekly 25% water change to keep the water clean and your betta healthy. Ammonia and nitrites will build up in the water from uneaten food and fish waste. These are poison to the betta and will kill your fish. Use a water test kit to check the ammonia, nitrite and nitrate levels. When cleaning your tank, do not wash your aquariums with soap. Chemical residue will be left behind. If you are using tap water, use a water conditioner. It is designed to neutralize chloramines and other metals that are unsafe for your fish. Well water will probably not have chlorine. Aquarium salts (not table salt) can be added to further improve fish health. Cloudy water and algae blooms are signs that mean a water change is past due, and may also signal other issues with the tank. Bettas kept in bowls will need a daily 100% water change because ammonia levels will spike within 24 hours.
+                </p>
+              </li>
+              <li><b>Food:</b>
+                <p>A Betta’s diet should be protein rich and meaty. Pellets, frozen or live bloodworms, daphnia, and brine shrimp are best.</p>
+              </li>
+              <li><b>Decorations:</b>
+                <p>Bettas like having furniture in their home, but betta fins are delicate and can tear on sharp edges. Silk plants are safe for bettas, and live plants are great options that can also improve water conditions. Bettas like to rest near the surface of the water, so a leaf or a betta hammock are also good additions. To check is a decoration is safe for your betta, run a pantyhose over it and make sure it doesn't catch on the surface. Adding driftwood and dried almond leaves is also a popular choice for bettas. These contain tannins and will turn the tank water brown, and are referred to as blackwater tanks. Tannins aren't "dirty" and actually simulate the natural habitat of the betta. It helps boost their immune system.
+                </p>
+              </li>
+              <li><b>Lighting:</b>
+                <p>Adding light to a tank will help your aquarium stand out in a room and show your fishes' vibrant colors. If you decide to add live plants to your tank, getting a light for your tank is also recommended so the plants can photosynthesize and do its thing. Low light plants are beginner plants that are easier to maintain because they don't have strict light requirements to survive and thrive. When deciding on lighting for your tank, take into consideration the light requirements of your plants.
+                </p>
+              </li>
+              <li><b>Accessories:</b>
+                <p>A water test kit, water conditioner, net, and fish food are essential in fish keeping. Some aquatic plants will require a CO2 injection system to thrive, but it is not required with beginner plants.
+                </p>
+              </li>
+              <li><b>Tankmates:</b>
+                <p>Male bettas are aggressive and should be kept singly, or in a community tank with appropriate tankmates. Bettas are territorial, and when housed with other bettas, will fight, often grievously injuring each other. In the wild, when a betta loses, it leaves the other fish's territory. In an aquarium setting however, there is nowhere for it to go. In a nanotank (<10g), only a snail, shrimp or a dwarf frog can be appropriate tankmates. Adding more fish will increase the bioload and be unhealthy for your fish. In larger tanks, other fish can be housed with the betta, however; observation would be needed to ensure all the fish get along. Providing a lot of plants for cover will improve chances of success. The fish must be able to hide. Select a tropical community fish for your betta. Cold water fish like goldfish have different water requirements. Goldfish are called dirty fish and will significantly affect your water parameters. Aggressive fish like cichlids will bully and kill your betta. Bettas have a tendency to be more aggressive towards other colorful fish, but some can be housed with guppies. It will depend on your betta's personality. Bettas should also not be housed with fin nippers. They have been known to chase and rip the betta's fins apart. Remove the betta if you notice this behaviour. Platies, otocinclus, neon tetras, and guppies are popular community tank options. Tankmates aren't always a one-size-fits-all situation however, and you must observe the fish for unwanted behaviour so none of the fish are injured.
+                </p>
+              </li>
+              <li><b>Betta Sororities:</b>
+                <p>Some aquarists have successfully housed a group of female bettas in their tank. This is not always a success, and alternatives must be available should it go awry. To set up a sorority tank, an absolute minimum of 10 gallons must be met, with a heavy preference for higher. Each female will need to have enough space for her own territory. Select longer tanks over tall ones, because all the bettas will need to have access to the surface to breath. Plant cover must be provided, and cover a significant area from top to bottom. A minimum of 5 females can be kept together. Females can be just aggressive as their male counterparts, so be very watchful of the sorority. Select bettas that are very close in size, better yet from the same spawn. Bettas that are already kept in community tanks might make better sorority sisters. The first two weeks is when the girls will determine their heirarchy, so some nipping might be expected, but excessive aggression and injury must be prevented.
+                </p>
+              </li>
+          </ul> <!-- end bettabasics -->
+        <h3> Common Illnesses </h3>
+          <ul class="illness">
+            <li><b>Ammonia Burn</b>
+              <p>Characterized by the darkening of the edges of the fins, ammonia burn is caused by high levels of ammonia in your water. Check the water parameters, and perform a water change. Check the parameters daily and change the water as needed. You may use aquarium salt and add tannins to help the betta as well.</p>
+            </li>
+            <li><b>Fin Rot</b>
+              <p>The betta's fins look shredded or appear to be shrinking. Can be caused by poor water conditions or a fungal infection. Keep the water in pristine condition to boost your betta's immune system. Damaged fins can recover with the proper care. Test the water parameters and perform a water change. Test everyday and change the water as needed. Aquarium salt and tannins will help the betta's immune system.</p>
+            </li>
+            <li><b>Ich</b>
+              <p>A fungal infection that looks like white spots covering the fish's fins and body. It must be treated with the appropriate antifungal medicine and the water must be tested. Keep the water clean by testing the parameters everyday and changing the water as needed. Raise the temperature to 80° and add aquarium salt.</p>
+            </li>
+          </ul>
+      </div> <!-- end basics -->
+
+      <div class="navbar-spacer" id="about"></div>
+
+      <div class="about">
+        <h1>About Us</h1>
+        <p><strong> FancyFins is a student eCommerce website, and is only intended for portfolio purposes. None of the displayed items are on sale.</strong></p>
+        <p> FancyFins, a site for betta fish fans- probably the fish with the biggest fin to body ratio. I decided to make FancyFins because Bettas are popular low maintenance pets. They have bright, colorful, large fins, and come in many varieties. I am a fan of this fish, and have kept them as pets for a few years. Bettas have a lot of enthusiasts, and breeders continue to expand the selection of these beautiful fish. The popularity of the betta as a pet has made once rare colorations and and fin types more common, and what was before only available exclusively to breeders can now be found in pet stores. Unfortunately, proper care for these fishes isn't practiced, and many companies sell products that keep them in substandard living conditions, and tout long debunked myths on the living conditions of wild bettas.</p>
+      </div> <!-- end about -->
+
+      <div class="navbar-spacer" id="contact"></div>
+
+      <div class="contact">
+        <h1>Contact Us</h1>
+
+        <%= flash[:notice] %>
+
+        <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <%= form.label :name %>
+              <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+            </div>
+            <div class="form-group">
+              <%= form.label :email %>
+              <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+            </div>
+            <div class="form-group">
+              <%= form.label :message %>
+              <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
+            </div>
+          </div>
+        </div>
+        <%= form.submit "Send", class: "form_label send_button" %>
+        <% end %>
+      </div> <!-- end contact -->
+    </div> <!-- end col -->
+  </div> <!-- end row -->
 </div>
+
+<script>
+$(document).ready(function(){
+    $('#sidebar').affix({offset: {top: 400} });
+});
+</script>

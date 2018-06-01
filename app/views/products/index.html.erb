@@ -3,37 +3,12 @@
   <p id="notice"><%= notice %></p>
 
   <div class="row">
-    <div class="col-md-2 sidebar-filter">
-      <h4>Filter Options</h4>
 
-      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="headingOne">
-            <h4 class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <span class="glyphicon glyphicon-chevron-right"></span> Price
-              </a>
-            </h4>
-          </div> <!-- end panel-title -->
-          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-            <div class="panel-body">
-
-            </div> <!-- end panel-body -->
-          </div><!-- end panel-collapse -->
-        </div><!-- end panel-default -->
-
-      </div><!-- end panel-group questions -->
-
-      <%= button_tag(type: 'submit', class: "btn btn-primary, filter_search_submit") do %>
-        <span class="glyphicon glyphicon-search"></span> Apply Options
-      <% end %>
-    </div>
-
-    <div class="col-md-10">
+    <div class="col-md-12">
 
       <h1>Products</h1>
 
-      <h2 class="section-title"> 3D Models </h2>
+      <h2 class="section-title"> Live Betta </h2>
 
       <%= render @products %>
 

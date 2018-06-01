@@ -2,25 +2,25 @@
   <h1>Order #<%= @order.id %></h1>
   <div class="row">
     <div class="col-md-8 order">
-      <div class="product-image col-md-4">
-        <%= image_tag(@product.image_url, class: "img-responsive") %>
+      <div class="male_bettum-image col-md-4">
+        <%= image_tag(@male_bettum.image_url, class: "img-responsive") %>
       </div>
       <div class="col-md-8">
-        <h3><%= @product.name%></h3>
-        <h4><strong><%= number_to_currency(@product.price) %></strong></h4>
+        <h3><%= @male_bettum.name%></h3>
+        <h4><strong><%= number_to_currency(@male_bettum.price) %></strong></h4>
         <p>
-          ID:<%= @product.id%><br>
-          <%= @product.copy %><br>
-          <%= @product.description %>
+          ID:<%= @male_bettum.id%><br>
+          <%= @male_bettum.copy %><br>
+          <%= @male_bettum.description %>
         </p>
       </div>
     </div>
     <div class="col-md-3 order">
       <h4>Order Total: <%= number_to_currency(@order.total) %></h4>
       <hr>
-      <button type="button"><%= link_to 'Back', products_path %> </button>
+      <button type="button"><%= link_to 'Back', male_betta_path %> </button>
     </div>
-    <!-- <%= @product.inspect %> -->
+    <!-- <%= @male_bettum.inspect %> -->
   </div>
 
 </div>

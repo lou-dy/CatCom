@@ -2,70 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  font-family: 'Quicksand', 'Futura', 'Verdana', 'Arial', sans-serif;
-  background-color: #efefef;
-  margin:0;
-}
-
-nav {
-  padding-right: 3em;
-  background: #f6f8f9;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  // box-shadow: 0 0 50px #727171;
-}
-
-.navbar-inverse {
-  border: none;
-}
-
-.my-placeholder {
-  max-height: 500px;
-  width: 500px;
-  margin: auto;
-}
-
-footer {
-  clear:both;
-  position: sticky;
-  padding-right: 3em;
-  text-align: right;
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-
-h1 {
-  font-family: 'Julius Sans One', 'Futura', 'Verdana', 'Arial', sans-serif;
-  text-align: center;
-  color: #5f6268;
-}
-
-h2 {
-  font-family: 'Quicksand', 'Futura', 'Verdana', 'Arial', sans-serif;
-  margin-left: 1em;
-}
-
-h3 {
-  height: 50px;
-  font-size: 2em;
-  font-weight: 600;
-}
-
-.welcome {
-  text-align: left;
-}
-
-.big-logo > img {
-  margin-top: 6em;
-  width: 200px;
-}
-
 #featured_h1 {
   position: absolute;
   margin-left: auto;
@@ -77,17 +13,13 @@ h3 {
 
 #carousel {
   margin:0;
-  padding: 100px 0 0 0;
   width: 100vw;
-  min-height: 80vh;
-  max-height: 100vh;
   left: -15px;
+  top: -90px;
 }
 
 .item > img{
-  max-height: 70vh;
   margin: auto;
-  padding-top: 80px;
 }
 
 .carousel-caption {
@@ -102,6 +34,69 @@ h3 {
   margin: 0 0 25px 0;
 }
 
+.item > img,
+.carousel-inner,
+.carousel,
+#carousel {
+  max-height: 400px;
+}
+
 .thanks {
   margin-top: 6em;
+}
+
+.form_devise {
+  background-color: #9bccdd;
+  margin: auto;
+  width: 320px;
+  padding: 20px;
+}
+
+.form_devise_tb {
+  width: 280px;
+  height: 40px;
+}
+
+.form_devise_cbox,
+.form_devise_label {
+  display: inline;
+  width: auto;
+}
+
+.form_devise_input {
+  width: 280px;
+  height: 40px;
+}
+
+#homeImg {
+  width: 100%;
+}
+
+.sidebar img{
+  width: 280px;
+}
+
+@media (min-width: 979px) {
+    #sidebar.affix-bottom {
+        position: relative;
+        margin-top:120px;
+    }
+
+    #sidebar.affix-top {
+        position: static;
+        margin-top:120px;
+    }
+
+    #sidebar.affix {
+        position: fixed;
+        top:120px;
+    }
+}
+
+#sidebar.affix-top{
+    position:static;
+}
+
+#nav1.affix-bottom {
+    position: relative
 }

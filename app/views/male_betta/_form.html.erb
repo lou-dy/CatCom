@@ -1,0 +1,52 @@
+<%= form_with(model: male_bettum, local: true) do |form| %>
+  <% if male_bettum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(male_bettum.errors.count, "error") %> prohibited this male_bettum from being saved:</h2>
+
+      <ul>
+      <% male_bettum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :male_bettum_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :male_bettum_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price, id: :male_bettum_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tail %>
+    <%= form.text_field :tail, id: :male_bettum_tail %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color %>
+    <%= form.text_field :color, id: :male_bettum_color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pattern %>
+    <%= form.text_field :pattern, id: :male_bettum_pattern %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_url %>
+    <%= form.text_field :image_url, id: :male_bettum_image_url %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="form_devise">
+      <h2>FancyFins</h2>
+
+      <h4>Log in</h4>
+
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form_devise_tb", placeholder: "Email" %>
+        </div>
+
+        <div class="field">
+          <%= f.password_field :password, autocomplete: "off", class: "form_devise_tb", placeholder: "Password" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Log in", class: "form_devise_input" %>
+        </div>
+
+        <% if devise_mapping.rememberable? -%>
+          <div class="field">
+            <%= f.check_box :remember_me, class: "form_devise_cbox" %>
+            <%= f.label :remember_me, class: "form_devise_label"%>
+          </div>
+        <% end -%>
+
+      <% end %>
+
+      <p> Don't have an account? </p>
+
+      <%= render "devise/shared/links" %>
+    </div> <!-- end col -->
+  </div> <!-- end row -->
+</div> <!-- end container -->

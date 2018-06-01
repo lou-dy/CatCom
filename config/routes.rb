@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  resources :products
+  resources :male_betta
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }
+  resources :users
 
   resources :orders, only: [:index, :show, :create, :destroy]
 
-  root 'simple_pages#landing_page'
+  root 'simple_pages#index'
 
   get 'simple_pages/about'
 

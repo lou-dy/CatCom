@@ -1,6 +1,6 @@
 # README
 
-CatCom will be my first student created app using Ruby and Rails.
+FancyFins will be my first student created app using Ruby and Rails.
 
 Things you may want to cover:
 
