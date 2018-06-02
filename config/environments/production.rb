@@ -90,5 +90,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # any dynamic links that show up inside emails from your production environment generates the right URLs
-  config.action_mailer.default_url_options = { host: ‘catcom.herokuapp.com’ }
+  config.action_mailer.default_url_options = { host: catcom.herokuapp.com }
 end
