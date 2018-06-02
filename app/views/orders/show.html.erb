@@ -1,7 +1,6 @@
 <div class="container">
   <h2>Order Information</h2>
   <strong>Order ID: </strong><%= @order.id %>
-  <strong>User ID: </strong><%= @order.user_id %>
   <strong>Product Name: </strong><%= @order.male_bettum.name %>
   <strong>Product Price: </strong><%= number_to_currency(@order.male_bettum.price/100.to_f) %>
   <strong>Total Price: </strong><%= number_to_currency(@order.total/100.to_f) %>
