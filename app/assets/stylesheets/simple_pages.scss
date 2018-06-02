@@ -15,7 +15,7 @@
   margin:0;
   width: 100vw;
   left: -15px;
-  top: -90px;
+  top: -25px;
 }
 
 .item > img{
@@ -99,4 +99,11 @@
 
 #nav1.affix-bottom {
     position: relative
+}
+
+.affix {
+  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
 }
