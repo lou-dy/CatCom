@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  resources :male_betta
+
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }
+
+  resources :male_betta do
+    resources :comments
+  end
+  
   resources :users
 
   resources :orders, only: [:index, :show, :create, :destroy]

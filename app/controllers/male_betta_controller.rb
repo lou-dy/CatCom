@@ -15,6 +15,7 @@ class MaleBettaController < ApplicationController
   # GET /male_betta/1
   # GET /male_betta/1.json
   def show
+    @comments = @male_bettum.comments.order("created_at DESC")
   end
 
   # GET /male_betta/new
@@ -76,4 +77,5 @@ class MaleBettaController < ApplicationController
     def male_bettum_params
       params.require(:male_bettum).permit(:name, :description, :image_url, :color, :tail, :price, :pattern)
     end
+
 end
