@@ -12,9 +12,11 @@
 
       <br>
 
-      <div class="add-button">
-        <%= link_to 'Restock', new_male_bettum_path %>
-      </div>
+      <% if signed_in? && current_user.admin? %>
+        <div class="add-button">
+          <%= link_to 'Restock', new_male_bettum_path %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

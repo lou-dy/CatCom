@@ -11,19 +11,23 @@
       <p><%= @male_bettum.description %></p>
       <table>
         <tr>
-          <th><h4>Average Rating </h4> </th>
+          <th><h4>Price</h4></th>
+          <td><%= number_to_currency(@male_bettum.price) %></td>
+        </tr>
+        <tr>
+          <th><h4>Average Rating</h4></th>
           <td><div class="rated" data-score="<%= @male_bettum.average_rating %>"></div></td>
         </tr>
         <tr>
-          <th><h4>Color</h4> </th>
+          <th><h4>Color</h4></th>
           <td><%= @male_bettum.color %></td>
         </tr>
         <tr>
-          <th><h4>Tail Type</h4> </th>
+          <th><h4>Tail Type</h4></th>
           <td><%= @male_bettum.tail %></td>
         </tr>
         <tr>
-          <th><h4>Pattern</h4> </th>
+          <th><h4>Pattern</h4></th>
           <td><%= @male_bettum.pattern %></td>
         </tr>
       </table>
