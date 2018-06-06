@@ -16,6 +16,7 @@ class MaleBettaController < ApplicationController
   # GET /male_betta/1.json
   def show
     @comments = @male_bettum.comments.order("created_at DESC")
+    @comments = @male_bettum.comments.paginate(:page => params[:page], :per_page => 3)
   end
 
   # GET /male_betta/new
@@ -34,7 +35,7 @@ class MaleBettaController < ApplicationController
 
     respond_to do |format|
       if @male_bettum.save
-        format.html { redirect_to @male_bettum, notice: 'Male bettum was successfully created.' }
+        format.html { redirect_to @male_bettum, notice: 'Betta was successfully created.' }
         format.json { render :show, status: :created, location: @male_bettum }
       else
         format.html { render :new }
@@ -48,7 +49,7 @@ class MaleBettaController < ApplicationController
   def update
     respond_to do |format|
       if @male_bettum.update(male_bettum_params)
-        format.html { redirect_to @male_bettum, notice: 'Male bettum was successfully updated.' }
+        format.html { redirect_to @male_bettum, notice: 'Betta was successfully updated.' }
         format.json { render :show, status: :ok, location: @male_bettum }
       else
         format.html { render :edit }
@@ -62,7 +63,7 @@ class MaleBettaController < ApplicationController
   def destroy
     @male_bettum.destroy
     respond_to do |format|
-      format.html { redirect_to male_betta_url, notice: 'Male bettum was successfully destroyed.' }
+      format.html { redirect_to male_betta_url, notice: 'Betta was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

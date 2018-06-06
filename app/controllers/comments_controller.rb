@@ -4,8 +4,15 @@ class CommentsController < ApplicationController
     @male_bettum = MaleBettum.find(params[:male_bettum_id])
     @comment = @male_bettum.comments.new(comment_params)
     @comment.user = current_user
-    @comment.save
-    redirect_to male_bettum_path(@male_bettum)
+    respond_to do |format|
+      if @comment.save
+        format.html { redirect_to @male_bettum, notice: 'Review was created successfully.' }
+        format.json { render :show, status: :created, location: @male_bettum }
+      else
+        format.html { redirect_to @male_bettum, alert: 'Review not saved.' }
+        format.json { render json: @comment.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def destroy

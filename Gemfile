@@ -61,6 +61,11 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# Gemfile for Users
 gem 'devise'
 
+# Gemfile for authorization
 gem 'cancancan', '~> 2.0'
+
+## Gemfile for Rails 3+, Sinatra, or Merb
+gem 'will_paginate', '~> 3.1.1'

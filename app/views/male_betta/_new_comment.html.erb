@@ -1,15 +1,16 @@
 <% if signed_in? %>
-  <h4>Add a review:</h4>
+  <h4>Add a review</h4>
   <%= form_for([@male_bettum, @male_bettum.comments.build]) do |f| %>
     <p>
-      <%= f.label :body, "Leave a review" %><br>
+      <div class="rating"> Rating: </div>
+    </p>
+    <p>
       <%= f.text_area :body %>
     </p>
     <p>
-      <div class="rating"></div>
-    </p>
-    <p>
-      <%= f.submit "Submit" %>
+      <%= button_tag(type: 'submit', class: "button btn btn-info") do %>
+        Submit <span class="glyphicon glyphicon-send"></span>
+      <% end %>
     </p>
   <% end %>
 <% end %>

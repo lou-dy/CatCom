@@ -1,6 +1,11 @@
 // Place all the styles related to the male_betta controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.show-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 .product,
 .order {
   background-color: #FFF;
@@ -73,35 +78,11 @@
   text-align: left;
 }
 
-.send_button,
-.add-button,
-.show-button > button {
-  background: #f6f8f9;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  // box-shadow: 0 0 50px #727171;
-  padding: 1em;
-  font-size: 1.5em;
-  text-align: center;
-  text-decoration: none;
-  margin: 10px;
-  width: 300px;
-  // border: solid 2px black;
-}
-
 .add-button {
   clear: both;
   margin: 1em 1em 5em 1em;
 }
 
-.show-button {
-  margin-top: 15em;
-}
 
 .price {
   text-align: right;
@@ -123,4 +104,62 @@ textarea {
 .sidebar-filter {
   text-align: left;
   align-items: left;
+}
+
+.new_comment textarea {
+  height: 150px;
+  width: 100%;
+  resize: none;
+}
+
+.pagination {
+  font-family: 'Quicksand', 'Futura', 'Verdana', 'Arial', sans-serif;
+  font-size: 15px;
+}
+
+.pagination a,
+.pagination em,
+.pagination span {
+  padding: 5px;
+  &:hover{
+    background-color: #f79540;
+  }
+}
+
+.glyphicon {
+  color: #FFF;
+  > p {
+    margin: 0;
+  }
+}
+
+.btn-info {
+  background-color: #1f8cad;
+  border-color: #187d9b;
+  &:hover {
+    background-color: #f79540;
+    border-color: #e8852e;
+  }
+}
+
+.reviews {
+  display: block;
+  margin-top: 50px;
+  padding: 18px;
+  clear: both;
+}
+.product-reviews {
+  padding: 10px;
+}
+
+table {
+  margin-bottom: 30px;
+  & th {
+    text-align: left;
+    padding: 0;
+  }
+  & td {
+    padding-left: 10px;
+    font-size: 15px;
+  }
 }
