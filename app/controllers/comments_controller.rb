@@ -16,6 +16,11 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    @comment = Comment.find(params[:id])
+    male_bettum = @comment.male_bettum
+    authorize! :destroy, @comment
+    @comment.destroy
+    redirect_to male_bettum
   end
 
   private
