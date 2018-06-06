@@ -6,4 +6,6 @@ class User < ApplicationRecord
   has_many :orders
   has_many :comments
 
+  ROLES = %i[admin moderator author banned]
+
 end
