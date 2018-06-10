@@ -4,7 +4,7 @@ describe MaleBettum do
 
   context "rating average" do
 
-    let(:male_betta) { MaleBettum.create!(name: "Test fish", price: "15") }
+    let(:male_betta) { MaleBettum.create!(name: "Test fish", price: "15", description: "Fishy") }
     let(:user) { User.create!(first_name:"John", last_name:"Doe", email:"johndoe@test.com", password:"123456")}
 
     before do
@@ -22,7 +22,7 @@ describe MaleBettum do
     let(:male_betta) { MaleBettum.new(description: "Nice fish")}
 
     it "should not be valid" do
-      expect(MaleBettum.new(description: "Nice bike")).not_to be_valid
+      expect(MaleBettum.new(description: "fishy fish")).not_to be_valid
     end
   end
 

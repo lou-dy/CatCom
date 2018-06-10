@@ -68,5 +68,8 @@ gem 'devise'
 # Gemfile for authorization
 gem 'cancancan', '~> 2.0'
 
-## Gemfile for Rails 3+, Sinatra, or Merb
+# Gemfile for Rails 3+, Sinatra, or Merb
 gem 'will_paginate', '~> 3.1.1'
+
+# Gemfile provides the assigns and assert_template functions
+gem 'rails-controller-testing'

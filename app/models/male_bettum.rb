@@ -3,6 +3,7 @@ class MaleBettum < ApplicationRecord
   has_many :comments
   validates :name, presence: true
   validates :price, presence: true
+  validates :description, presence: true
 
   def self.search(search_term)
     if Rails.env.development?
