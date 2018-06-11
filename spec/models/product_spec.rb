@@ -5,7 +5,7 @@ describe MaleBettum do
   context "rating average" do
 
     let(:male_betta) { MaleBettum.create!(name: "Test fish", price: "15", description: "Fishy") }
-    let(:user) { User.create!(first_name:"John", last_name:"Doe", email:"johndoe@test.com", password:"123456")}
+    let(:user) { @user = FactoryBot.create(:user) }
 
     before do
       male_betta.comments.create!(rating: 1, user: user, body: "Awful fish!")
