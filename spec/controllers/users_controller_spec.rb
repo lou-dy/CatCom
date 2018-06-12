@@ -1,16 +1,9 @@
 require 'rails_helper'
 
-describe User, type: :model do
-  it "should not validate users without an email address" do
-    @user = FactoryBot.build(:user, email: "not_an_email")
-    expect(@user).to_not be_valid
-  end
-end
-
 describe UsersController, type: :controller do
 
-  let(:user) { User.create!(first_name:"John", last_name:"Smith", email:"jsmith@test.com", password:"654321") }
-  let(:user2) { User.create!(first_name:"Jane", last_name:"Who", email:"janewho@test.com", password:"654321") }
+  let(:user) { FactoryBot.create(:user) }
+  let(:user2) { FactoryBot.create(:user) }
 
   describe 'GET #show' do
     context 'when a user is logged in' do
