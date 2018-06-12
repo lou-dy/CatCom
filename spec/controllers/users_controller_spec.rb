@@ -9,7 +9,7 @@ end
 
 describe UsersController, type: :controller do
 
-  let(:user) { @user = FactoryBot.create(:user) }
+  let(:user) { User.create!(first_name:"John", last_name:"Smith", email:"jsmith@test.com", password:"654321") }
   let(:user2) { User.create!(first_name:"Jane", last_name:"Who", email:"janewho@test.com", password:"654321") }
 
   describe 'GET #show' do
