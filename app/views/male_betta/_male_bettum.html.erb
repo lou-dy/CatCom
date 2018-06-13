@@ -10,3 +10,5 @@
     <%= link_to 'Show', male_bettum %> | <%= link_to 'Edit', edit_male_bettum_path(male_bettum) %> | <%= link_to 'Destroy', male_bettum, method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>
 </div>
+
+<% logger.debug "There is a #{male_bettum.name} betta" %>

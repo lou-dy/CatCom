@@ -1,5 +1,8 @@
 class PaymentsController < ApplicationController
+  before_action :authenticate_user!
+
   def create
+    byebug
     @male_bettum = MaleBettum.find(params[:male_bettum_id])
     @user = current_user
     token = params[:stripeToken]

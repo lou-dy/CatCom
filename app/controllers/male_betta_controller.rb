@@ -10,6 +10,7 @@ class MaleBettaController < ApplicationController
     else
       @male_betta = MaleBettum.all
     end
+    logger.debug "There are #{@male_betta.count} bettas"
   end
 
   # GET /male_betta/1
