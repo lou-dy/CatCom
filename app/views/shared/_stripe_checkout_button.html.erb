@@ -6,3 +6,7 @@
   data-description="<%= @male_bettum.description %>"
   data-amount="<%= @male_bettum.price %>">
 </script>
+
+<%= hidden_field_tag(:male_bettum_id, @male_bettum.id) %>
+
+<%= puts @male_bettum.id %>

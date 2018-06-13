@@ -8,7 +8,7 @@
           <%= link_to order.male_bettum.name, order %>
         </h3>
         <p><%= order.male_bettum.description %></p>
-        <p><strong>$<%= order.male_bettum.price %></strong></p>
+        <p><strong><%= number_to_currency(order.male_bettum.price/100.to_f) %></strong></p>
       </div><!-- /col -->
     <% end %>
   </div>
