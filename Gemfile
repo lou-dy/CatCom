@@ -75,3 +75,6 @@ gem 'will_paginate', '~> 3.1.1'
 
 # Gemfile provides the assigns and assert_template functions
 gem 'rails-controller-testing'
+
+# Payment Gem
+gem 'stripe'

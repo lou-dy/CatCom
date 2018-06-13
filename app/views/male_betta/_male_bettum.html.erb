@@ -4,7 +4,7 @@
   <p><%= male_bettum.description %> </p>
   <hr>
   <p class="price">
-    <strong> <%= number_to_currency(male_bettum.price) %> </strong>
+    <strong> <%= number_to_currency(male_bettum.price/100.to_f) %> </strong>
   </p>
   <% if signed_in? && current_user.admin? %>
     <%= link_to 'Show', male_bettum %> | <%= link_to 'Edit', edit_male_bettum_path(male_bettum) %> | <%= link_to 'Destroy', male_bettum, method: :delete, data: { confirm: 'Are you sure?' } %>

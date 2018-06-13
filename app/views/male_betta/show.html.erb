@@ -12,7 +12,7 @@
       <table>
         <tr>
           <th><h4>Price</h4></th>
-          <td><%= number_to_currency(@male_bettum.price) %></td>
+          <td><%= number_to_currency(@male_bettum.price/100.to_f) %></td>
         </tr>
         <tr>
           <th><h4>Average Rating</h4></th>
@@ -31,6 +31,10 @@
           <td><%= @male_bettum.pattern %></td>
         </tr>
       </table>
+
+      <%= form_with(url: '/payments/create') do |form| %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %>
 
       <div class="show-button">
         <%= link_to raw("<span class='button glyphicon glyphicon-edit'> <p> Edit </p> </span>"), edit_male_bettum_path(@male_bettum), class: "button btn btn-info" %>
