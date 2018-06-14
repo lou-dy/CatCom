@@ -22,11 +22,13 @@ class MaleBettaController < ApplicationController
 
   # GET /male_betta/new
   def new
+    authorize! :read, @male_bettum
     @male_bettum = MaleBettum.new
   end
 
   # GET /male_betta/1/edit
   def edit
+    authorize! :read, @male_bettum
   end
 
   # POST /male_betta

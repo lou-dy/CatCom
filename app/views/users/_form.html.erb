@@ -21,7 +21,9 @@
     <%= form.text_field :last_name, id: :user_last_name %>
   </div>
 
-  <%= form.collection_select(:role, User::ROLES, :to_s, lambda{|i| i.to_s.humanize}) %>
+  <% if signed_in? && current_user.admin? %>
+    <%= form.collection_select(:role, User::ROLES, :to_s, lambda{|i| i.to_s.humanize}) %>
+  <% end %>
 
   <div class="actions">
     <%= form.submit %>

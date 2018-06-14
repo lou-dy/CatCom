@@ -78,3 +78,6 @@ gem 'rails-controller-testing'
 
 # Payment Gem
 gem 'stripe'
+
+# Security
+gem "brakeman"
