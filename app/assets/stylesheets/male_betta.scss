@@ -169,3 +169,15 @@ table {
   background-color: none;
   text-decoration: none;
 }
+
+.payment-button,
+.button-shelf p {
+  display: inline-block;
+  height: 10px;
+  font-size: 15px;
+}
+
+.button-shelf .btn {
+  padding: 5px 12px;
+  margin-bottom: 3px;
+}
