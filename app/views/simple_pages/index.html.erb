@@ -39,15 +39,17 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-4 col-md-3">
-      <div class="sidebar" id="sidebar">
-        <img id="basicsImg" src="https://gobetta.com/wp-content/uploads/2017/02/DoubleTailWhite.png">
-        <ul class="nav nav-pills nav-stacked">
-          <li class="nav-link" id="featurelink"> <a href="#feature"> Featured Products </a> </li>
-          <li class="nav-link" id="basicslink"> <a href="#basics"> Betta Care Sheet </a> </li>
-          <li class="nav-link" id="aboutlink"> <a href="#about"> About Us </a> </li>
-          <li class="nav-link" id="contactlink">  <a href="#contact"> Contact Us </a> </li>
-        </ul>
-      </div>
+      <% cache do %>
+        <div class="sidebar" id="sidebar">
+          <img id="basicsImg" src="https://gobetta.com/wp-content/uploads/2017/02/DoubleTailWhite.png">
+          <ul class="nav nav-pills nav-stacked">
+            <li class="nav-link" id="featurelink"> <a href="#feature"> Featured Products </a> </li>
+            <li class="nav-link" id="basicslink"> <a href="#basics"> Betta Care Sheet </a> </li>
+            <li class="nav-link" id="aboutlink"> <a href="#about"> About Us </a> </li>
+            <li class="nav-link" id="contactlink">  <a href="#contact"> Contact Us </a> </li>
+          </ul>
+        </div>
+      <% end %>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-9">
 
@@ -167,8 +169,3 @@
   </div> <!-- end row -->
 
 </div>
-
-<% cache do %>
-  <% sleep 2 %>
-  <h1>Hello People!</h1>
-<% end %>
