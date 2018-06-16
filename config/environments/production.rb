@@ -68,7 +68,7 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "nameofapp_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
-  config.cache_store = :dalli_store, nil, { :namespace => CATCOM, :expires_in => 1.day, :compress => true }
+  config.cache_store = :dalli_store
 
 
   # Ignore bad email addresses and do not raise email delivery errors.
