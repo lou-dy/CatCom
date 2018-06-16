@@ -81,3 +81,5 @@ gem 'stripe'
 
 # Security
 gem "brakeman"
+
+gem 'dalli'

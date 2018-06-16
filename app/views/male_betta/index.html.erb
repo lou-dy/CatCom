@@ -8,7 +8,9 @@
 
       <h1>Male Bettas</h1>
 
-      <%= render @male_betta %>
+      <% cache(cache_key_for_male_betta) do %>
+        <%= render @male_betta %>
+      <% end %>
 
       <br>
 

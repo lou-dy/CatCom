@@ -2,6 +2,7 @@
 
 <div class="container">
   <div class="col-md-12">
+    <% cache @male_bettum do %>
     <h1 class="show-title"><%= @male_bettum.name %></h1>
     <div class="product-image col-md-6">
       <%= image_tag(@male_bettum.image_url, class: "img-responsive img-zoom", data_zoom_image: @male_bettum.image_url ) %>
@@ -32,7 +33,7 @@
         </tr>
       </table>
 
-
+    <% end %>
 
       <div class="button-shelf">
         <%= link_to raw("<span class='button glyphicon glyphicon-chevron-left'> <p> Back </p> </span>"), male_betta_path, class: "button btn btn-info" %>
