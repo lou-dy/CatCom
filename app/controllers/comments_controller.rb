@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
     @comment.user = current_user
     respond_to do |format|
       if @comment.save
+        ActionCable.server.broadcast 'male_bettum_channel', comment: @comment, average_rating: @comment.male_bettum.average_rating
         format.html { redirect_to @male_bettum, notice: 'Review was created successfully.' }
         format.json { render :show, status: :created, location: @male_bettum }
         format.js
