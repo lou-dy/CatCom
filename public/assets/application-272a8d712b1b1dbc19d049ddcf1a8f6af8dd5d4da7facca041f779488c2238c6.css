@@ -1,0 +1,607 @@
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  font-size: 2em;
+}
+
+@font-face {
+  font-family: "raty";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./fonts/raty.eot");
+  src: url("./fonts/raty.eot?#iefix") format("embedded-opentype");
+  src: url("./fonts/raty.svg#raty") format("svg");
+  src: url("./fonts/raty.ttf") format("truetype");
+  src: url("./fonts/raty.woff") format("woff");
+}
+
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "raty";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+
+.cancel-on-png:before {
+  content: "\e600";
+}
+
+.cancel-off-png:before {
+  content: "\e601";
+}
+
+.star-on-png:before {
+  content: "\f005";
+}
+
+.star-off-png:before {
+  content: "\f006";
+}
+
+.star-half-png:before {
+  content: "\f123";
+}
+/* line 4, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.show-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* line 9, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.product,
+.order {
+  background-color: #FFF;
+  border-spacing: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-bottom: solid 5px #1f8cad;
+  margin: 10px;
+  padding: 10px;
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+/* line 24, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.product:hover,
+.order:hover {
+  border-bottom: solid 5px #f79540;
+}
+
+/* line 29, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.product {
+  height: 400px;
+  align-items: center;
+  text-align: center;
+}
+
+/* line 35, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.product > a > img {
+  margin: auto;
+  max-width: 280px;
+  height: 200px;
+}
+
+/* line 41, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.product > h3 {
+  margin: 10px 0 0 0;
+}
+
+/* line 45, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.product > hr,
+.product > p {
+  margin: 0 0 10px 0;
+}
+
+/* line 50, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.product > p {
+  display: -webkit-box;
+  height: 36px;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+/* line 60, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.product {
+  width: 95%;
+}
+
+@media (min-width: 768px) {
+  /* line 66, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+  .product {
+    width: 47%;
+  }
+}
+@media (min-width: 992px) {
+  /* line 72, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+  .product {
+    width: 31%;
+  }
+}
+/* line 77, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.order {
+  text-align: left;
+}
+
+/* line 81, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.add-button {
+  clear: both;
+  margin: 1em 1em 5em 1em;
+}
+
+/* line 87, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.price {
+  text-align: right;
+  font-size: 1.5em;
+}
+
+/* line 92, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.product-image > img {
+  width: 100%;
+}
+
+/* line 96, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+textarea, input {
+  width: 800px;
+}
+
+/* line 100, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+textarea {
+  height: 300px;
+}
+
+/* line 104, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.sidebar-filter {
+  text-align: left;
+  align-items: left;
+}
+
+/* line 109, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.new_comment textarea {
+  height: 150px;
+  width: 100%;
+  resize: none;
+}
+
+/* line 115, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.pagination {
+  font-family: 'Quicksand', 'Futura', 'Verdana', 'Arial', sans-serif;
+  font-size: 15px;
+}
+
+/* line 120, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.pagination a,
+.pagination em,
+.pagination span {
+  padding: 5px;
+}
+/* line 124, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.pagination a:hover,
+.pagination em:hover,
+.pagination span:hover {
+  background-color: #f79540;
+}
+
+/* line 129, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.glyphicon.button {
+  color: #FFF;
+}
+/* line 131, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.glyphicon.button > p {
+  margin: 0;
+}
+
+/* line 136, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.btn-info {
+  background-color: #1f8cad;
+  border-color: #187d9b;
+}
+/* line 139, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.btn-info:hover {
+  background-color: #f79540;
+  border-color: #e8852e;
+}
+
+/* line 145, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.reviews {
+  display: block;
+  margin-top: 50px;
+  padding: 18px;
+  clear: both;
+}
+
+/* line 151, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.product-reviews {
+  padding: 10px;
+}
+
+/* line 155, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+table {
+  margin-bottom: 30px;
+}
+/* line 157, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+table th {
+  text-align: left;
+  padding: 0;
+}
+/* line 161, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+table td {
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+/* line 167, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.pName:hover {
+  color: inherit;
+  background-color: none;
+  text-decoration: none;
+}
+
+/* line 173, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.payment-button,
+.button-shelf p {
+  display: inline-block;
+  height: 10px;
+  font-size: 15px;
+}
+
+/* line 180, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/male_betta.scss */
+.button-shelf .btn {
+  padding: 5px 12px;
+  margin-bottom: 3px;
+}
+/* line 1, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 10, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 16, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 22, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 25, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 29, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+}
+
+/* line 34, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 43, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 48, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 52, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 58, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 65, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 75, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 81, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/* line 5, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/simple_pages.scss */
+#featured_h1 {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+/* line 14, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/simple_pages.scss */
+#carousel {
+  margin: 0;
+  width: 100vw;
+  left: -15px;
+  top: -25px;
+}
+
+/* line 21, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/simple_pages.scss */
+.item > img {
+  margin: auto;
+}
+
+/* line 25, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/simple_pages.scss */
+.carousel-caption {
+  position: relative;
+  left: auto;
+  right: auto;
+}
+
+/* line 31, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/simple_pages.scss */
+.carousel-caption > p {
+  font-family: 'Julius Sans One', 'Futura', 'Verdana', 'Arial', sans-serif;
+  font-size: 2em;
+  margin: 0 0 25px 0;
+}
+
+/* line 37, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/simple_pages.scss */
+.item > img,
+.carousel-inner,
+.carousel,
+#carousel {
+  max-height: 400px;
+}
+
+/* line 44, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/simple_pages.scss */
+.thanks {
+  margin-top: 6em;
+}
+
+/* line 48, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/simple_pages.scss */
+.form_devise {
+  background-color: #9bccdd;
+  margin: auto;
+  width: 320px;
+  padding: 20px;
+}
+
+/* line 55, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/simple_pages.scss */
+.form_devise_tb {
+  width: 280px;
+  height: 40px;
+}
+
+/* line 60, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/simple_pages.scss */
+.form_devise_cbox,
+.form_devise_label {
+  display: inline;
+  width: auto;
+}
+
+/* line 66, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/simple_pages.scss */
+.form_devise_input {
+  width: 280px;
+  height: 40px;
+}
+
+/* line 71, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/simple_pages.scss */
+#homeImg {
+  width: 100%;
+}
+
+/* line 75, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/simple_pages.scss */
+.sidebar img {
+  width: 280px;
+}
+
+@media (min-width: 979px) {
+  /* line 80, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/simple_pages.scss */
+  #sidebar.affix-bottom {
+    position: relative;
+    margin-top: 120px;
+  }
+
+  /* line 85, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/simple_pages.scss */
+  #sidebar.affix-top {
+    position: static;
+    margin-top: 120px;
+  }
+
+  /* line 90, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/simple_pages.scss */
+  #sidebar.affix {
+    position: fixed;
+    top: 120px;
+  }
+}
+/* line 96, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/simple_pages.scss */
+#sidebar.affix-top {
+  position: static;
+}
+
+/* line 100, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/simple_pages.scss */
+#sidebar.affix {
+  position: static;
+  top: 120px;
+}
+
+/* line 105, /Users/louisedyquiangco/dev/CatCom/app/assets/stylesheets/simple_pages.scss */
+#nav1.affix-bottom {
+  position: relative;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+
+
+ */
+
+
+body {
+  font-family: 'Quicksand', 'Futura', 'Verdana', 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+nav {
+  padding-right: 3em;
+}
+
+.navbar-inverse {
+  border: none;
+  background-color: #1f8cad;
+}
+
+.navbar-inverse .navbar-nav>li>a, .projectName a {
+  color: #FFF;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, .projectName a:hover {
+  background-color: #f79540;
+}
+
+.projectName a {
+  position: fixed;
+  top: 0;
+  left: -5px;
+  margin: 0;
+  padding: 15px 20px 15px 20px;
+}
+
+footer {
+  background-color: #1f8cad;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  padding-right: 3em;
+  margin-top: 2em;
+}
+
+#copy {
+  color: #FFF;
+  position: fixed;
+  padding: 10px;
+  right: 0;
+  bottom: 0;
+}
+
+h1 {
+  font-family: 'Julius Sans One', 'Futura', 'Verdana', 'Arial', sans-serif;
+  text-align: left;
+  color: #5f6268;
+}
+
+h2 {
+  font-family: 'Quicksand', 'Futura', 'Verdana', 'Arial', sans-serif;
+}
+
+h3 {
+  height: 50px;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.big-logo>img {
+  margin-top: 6em;
+  width: 200px;
+}
+
+.nav_search {
+  display: block;
+  padding: 10px;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.nav_searchbar {
+  min-width: 300px;
+  width: 50vw;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+.nav_search_submit {
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  font-size: 12px;
+}
+
+.navbar-spacer {
+  height: 75px;
+}
+
+.filter_search_submit {
+  padding: 0 10px 0 10px;
+  height: 30px;
+  border-radius: 50px;
+  font-size: 12px;
+}
+
+.notice {
+  z-index: 2;
+  position: absolute;
+  margin: 10%;
+}
+
+.notice img {
+  max-height: 40vh;
+}
+
+.notice p h2 {
+  text-align: left;
+  padding-left: 0;
+  margin-left: 0;
+}
