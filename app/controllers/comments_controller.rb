@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
+  load_and_authorize_resource
 
   def create
     @male_bettum = MaleBettum.find(params[:male_bettum_id])
@@ -6,7 +8,9 @@ class CommentsController < ApplicationController
     @comment.user = current_user
     respond_to do |format|
       if @comment.save
-        ActionCable.server.broadcast 'male_bettum_channel', comment: @comment, average_rating: @comment.male_bettum.average_rating
+        MaleBettumChannel.broadcast_to @male_bettum.id,
+          comment: CommentsController.render(partial: 'comments/comment', locals: {comment: @comment, current_user: current_user}),
+          average_rating: @male_bettum.average_rating
         format.html { redirect_to @male_bettum, notice: 'Review was created successfully.' }
         format.json { render :show, status: :created, location: @male_bettum }
         format.js
@@ -20,7 +24,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     male_bettum = @comment.male_bettum
-    authorize! :destroy, @comment
+    # authorize! :destroy, @comment
     @comment.destroy
     redirect_to male_bettum
   end

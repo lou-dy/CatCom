@@ -97,6 +97,11 @@
     position:static;
 }
 
+#sidebar.affix {
+    position: static;
+    top:120px;
+}
+
 #nav1.affix-bottom {
     position: relative
 }

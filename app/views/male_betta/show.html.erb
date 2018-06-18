@@ -1,11 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container">
-  <div class="col-md-12">
+  <div class="row" data-male-bettum-id="<%= @male_bettum.id %>">
     <% cache @male_bettum do %>
     <h1 class="show-title"><%= @male_bettum.name %></h1>
     <div class="product-image col-md-6">
-      <%= image_tag(@male_bettum.image_url, class: "img-responsive img-zoom", data_zoom_image: @male_bettum.image_url ) %>
+      <% if @male_bettum.image_url.present? %>
+        <%= image_tag(@male_bettum.image_url, class: "img-responsive img-zoom", data_zoom_image: @male_bettum.image_url ) %>
+      <% end %>
     </div>
     <% end %>
     <div class="product-description col-md-6">
