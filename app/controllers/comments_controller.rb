@@ -6,11 +6,9 @@ class CommentsController < ApplicationController
     @male_bettum = MaleBettum.find(params[:male_bettum_id])
     @comment = @male_bettum.comments.new(comment_params)
     @comment.user = current_user
+    @user = current_user
     respond_to do |format|
       if @comment.save
-        MaleBettumChannel.broadcast_to @male_bettum.id,
-          comment: CommentsController.render(partial: 'comments/comment', locals: {comment: @comment, current_user: current_user}),
-          average_rating: @male_bettum.average_rating
         format.html { redirect_to @male_bettum, notice: 'Review was created successfully.' }
         format.json { render :show, status: :created, location: @male_bettum }
         format.js
